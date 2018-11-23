@@ -4,7 +4,7 @@ var shell = require('gulp-shell')
 
 //this compiles new binary with source change
 gulp.task("install-binary", shell.task([
-    'go install $curws'
+    'go build $curws/middleware.go'
 ]))
 
 //second argument tells install-binary is a deapendency for restart-supervisor
